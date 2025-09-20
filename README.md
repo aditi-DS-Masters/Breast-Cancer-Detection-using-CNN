@@ -75,7 +75,7 @@ Although DenseNet169 achieves a slightly higher overall accuracy, DenseNet121 sh
 
 👉 **Recommendation:** For breast cancer histopathology classification, **DenseNet121** may be the more reliable choice due to its stronger recall performance, even if the accuracy is marginally lower.  
 
-**Confusion Matrix Example:**  
+**Confusion Matrix:**  
 ![Confusion Matrix](results/confusion_matrix.png)  
 
 **Training vs Validation Accuracy:**  
@@ -94,22 +94,4 @@ This project provided hands-on experience with:
 - Using **regularization (Dropout)** and training optimizations (EarlyStopping, LR scheduling)  
 - Evaluating models with both **metrics and visualizations**  
 
-📌 **Final Takeaway:** DenseNet variants (especially DenseNet121 and DenseNet169) provided the best results. While DenseNet169 achieved higher accuracy, DenseNet121 demonstrated stronger recall, making it a **preferred model for cancer detection tasks** where sensitivity is critical.  
-
----
-
-## 📌 Next Steps  
-- Experiment with **more advanced EfficientNet variations (B4-B7)**  
-- Apply **hyperparameter tuning** with Keras Tuner or Optuna  
-- Deploy the best model as a **web application** for inference  
-
----
-
-## 🖼️ Final Results and Visualizations  
-
-📌 Add your results here by replacing placeholders with actual images/graphs.  
-
-```markdown
-![Confusion Matrix](results/confusion_matrix.png)  
-![Accuracy Graph](results/accuracy_graph.png)  
-![Loss Graph](results/loss_graph.png)  
+📌 **Final Takeaway:** DenseNet variants (especially DenseNet121 and DenseNet169) provided the best results. While DenseNet169 achieved higher accuracy, DenseNet121 demonstrated stronger recall, making it a **preferred model for cancer detection tasks** where sensitivity is critical. 
