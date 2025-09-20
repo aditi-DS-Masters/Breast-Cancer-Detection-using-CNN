@@ -8,7 +8,8 @@ Our objective was to apply **Deep Learning techniques (CNNs & Transfer Learning)
 ---
 
 ## 📂 Dataset  
-- **Source:** [IDC_regular_ps50_idx5.zip](http://gleason.case.edu/webdata/jpi-dl-tutorial/IDC_regular_ps50_idx5.zip)  
+- **Source:** [IDC_regular_ps50_idx5.zip](http://gleason.case.edu/webdata/jpi-dl-tutorial/IDC_regular_ps50_idx5.zip)
+- **Reference:** [Kaggle Dataset](https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images/data)
 - **Acknowledgements:**  
   - [NIH PubMed Paper](https://www.ncbi.nlm.nih.gov/pubmed/27563488)  
   - [SPIE Conference Paper](http://spie.org/Publications/Proceedings/Paper/10.1117/12.2043872)  
