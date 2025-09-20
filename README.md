@@ -44,10 +44,13 @@ The dataset contains histopathology image patches of breast cancer, labeled as *
    - ✅ EfficientNetB3 (all layers trainable from scratch)  
    - ✅ VGG16 (Imagenet weights, partial unfreezing of multiple layers)  
    - ✅ VGG16 (Imagenet weights, all layers unfrozen, full retraining)  
+   - ✅ DenseNet121 (all layers trainable)  
+   - ✅ DenseNet169 (all layers trainable)  
 
 5. **Training Techniques**  
    - Used **EarlyStopping** to prevent overfitting.  
    - Applied **ReduceLROnPlateau** for adaptive learning rate scheduling.  
+   - Added **Dropout layers** for regularization and improved generalization.  
 
 6. **Evaluation**  
    - Plotted **accuracy and loss curves** (training vs validation).  
@@ -57,11 +60,20 @@ The dataset contains histopathology image patches of breast cancer, labeled as *
 
 ## 📊 Results  
 
-👉 *(Replace with your actual results once ready)*  
+- **DenseNet169**  
+  - Accuracy: **84%**  
+  - F1-Score: **0.82**  
+  - Recall: Slightly lower compared to DenseNet121  
 
-- **Best Model:** VGG16 with Imagenet weights + partially unfrozen layers  
-- **Validation Accuracy:** ~XX%  
-- **Test Accuracy:** ~XX%  
+- **DenseNet121**  
+  - Accuracy: **82.5%**  
+  - F1-Score: **0.82**  
+  - Recall: **Better recall for cancer detection**  
+
+⚡ **Key Insight:**  
+Although DenseNet169 achieves a slightly higher overall accuracy, DenseNet121 shows **better recall for cancer cases**. In medical imaging tasks, recall (sensitivity) is crucial since missing a cancer case is riskier than false positives.  
+
+👉 **Recommendation:** For breast cancer histopathology classification, **DenseNet121** may be the more reliable choice due to its stronger recall performance, even if the accuracy is marginally lower.  
 
 **Confusion Matrix Example:**  
 ![Confusion Matrix](results/confusion_matrix.png)  
@@ -78,11 +90,11 @@ The dataset contains histopathology image patches of breast cancer, labeled as *
 This project provided hands-on experience with:  
 - Handling large-scale histopathology datasets  
 - Applying **data augmentation** to improve robustness  
-- Comparing multiple **CNN architectures** and transfer learning strategies  
-- Using **training optimization techniques** (EarlyStopping, LR scheduling)  
-- Evaluating models using both **metrics and visualizations**  
+- Comparing multiple **CNN architectures** (VGG16, EfficientNet, DenseNet)  
+- Using **regularization (Dropout)** and training optimizations (EarlyStopping, LR scheduling)  
+- Evaluating models with both **metrics and visualizations**  
 
-The final models showed promising performance in distinguishing between **cancerous** and **non-cancerous** samples, demonstrating the potential of deep learning in medical image analysis.  
+📌 **Final Takeaway:** DenseNet variants (especially DenseNet121 and DenseNet169) provided the best results. While DenseNet169 achieved higher accuracy, DenseNet121 demonstrated stronger recall, making it a **preferred model for cancer detection tasks** where sensitivity is critical.  
 
 ---
 
